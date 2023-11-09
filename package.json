@@ -1,0 +1,26 @@
+{
+  "name": "create-my-react-project",
+  "version": "1.2.5",
+  "description": "",
+  "main": "./bin/cli.js",
+  "bin": {
+    "mycli": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "./bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "shenzhihao",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "child_process": "^1.0.2",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.1.1",
+    "log-symbols": "^4.1.0",
+    "ora": "^5.4.1",
+    "util": "^0.12.5"
+  }
+}
