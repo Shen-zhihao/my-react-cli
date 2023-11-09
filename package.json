@@ -1,6 +1,6 @@
 {
   "name": "create-my-react-project",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "",
   "main": "./bin/cli.js",
   "bin": {

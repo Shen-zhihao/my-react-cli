@@ -63,8 +63,6 @@ yarn link
 
 在<code style="color: #c7254e">node</code>程序中，通过<code style="color: #c7254e">process.argv</code>可获取到命令的参数，以数组返回
 
-![image-20210616165851713.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/77a0e84a690e421e8a9878685088aa33~tplv-k3u1fbpfcp-watermark.image)
-
 可以看到其实我们已经拿到各个参数，但是这样的获取方式不太直观，所以我们引入一个第三方 npm 包帮我们处理这部分功能：<code style="color: #c7254e">commander</code>,参考文档：[commander 文档](https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md)
 
 ```bash
@@ -334,6 +332,27 @@ const help = () => {
 
 program.on("-h", help);
 program.on("--help", help);
+```
+
+4. 为了更方便使用，我们加入对 npx 的支持
+
+```diff
+{
+  "name": "mycli-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin":{
+     "mycli": "./bin/cli.js"
+  },
+  "scripts": {
++   "start": "./bin/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
 ```
 
 至此我们完成了一个简易版 cli 工具的开发，后续优化版本将会直接发布至 npm
